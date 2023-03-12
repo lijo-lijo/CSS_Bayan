@@ -1,0 +1,153 @@
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: cornsilk;
+}
+
+.header {
+  font-family: sans-serif;
+  font-weight: 800;
+  font-size: 1.125em;
+  border-bottom: 1px solid gray;
+  padding: 0.635em 0;
+  margin: 0;
+}
+
+.accordion-item {
+  border-bottom: 1px solid gray;
+}
+
+.bayan-container {
+  margin: 1.25em;
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 0.625em 0px;
+}
+
+.accordion-content {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.5s ease-out, opacity 1s;
+}
+
+.accordion-img {
+  display: flex;
+  align-items: center;
+  max-width: 12.5em;
+  transition: opacity 0.1s ease-in-out, transform 0.7s ease;
+}
+
+.accordion-img:active {
+  opacity: 0.8;
+}
+
+.accordion-input {
+  appearance: none;
+  position: absolute;
+}
+
+.accordion-input:checked ~ .accordion-content {
+  padding: 1.25em 0;
+  max-height: 50em;
+  opacity: 1;
+  transition: max-height 0.5s ease-in;
+}
+
+.accordion-input:checked ~ .accordion-title > .plus-icon {
+  transform: rotate(45deg);
+}
+
+.plus-icon {
+  transition: all 0.25s ease-in-out;
+}
+
+/* tablet */
+
+@media (min-width: 820px) {
+  .header {
+    font-size: 1.5em;
+  }
+
+  .bayan-container {
+    margin: 0 auto;
+    max-width: 50em;
+  }
+
+  .accordion-title {
+    font-size: 1.25em;
+  }
+
+  .accordion-img {
+    max-width: 25em;
+  }
+}
+
+/* desktop */
+@media (min-width: 1920px) {
+  .header {
+    font-size: 2.25em;
+  }
+
+  .bayan-container {
+    margin: 0 auto;
+    max-width: 50em;
+  }
+
+  .bayan-container:hover .accordion-item > .accordion-title > .plus-icon {
+    color: black;
+  }
+
+  .bayan-container:hover .accordion-item > .accordion-title {
+    color: black;
+  }
+
+  .accordion-item {
+    cursor: pointer;
+  }
+
+  .accordion-title {
+    color: blue;
+    font-size: 1.75em;
+  }
+
+  .accordion-input:checked ~ .accordion-title,
+  .accordion-item:hover > .accordion-title {
+    color: black;
+  }
+
+  .accordion-item:hover > .accordion-content {
+    padding: 1.25em 0;
+    max-height: 50em;
+    opacity: 1;
+    transition: max-height 0.5s ease-in;
+  }
+
+  .plus-icon {
+    color: cornsilk;
+  }
+
+  .accordion-item:hover > .accordion-title > .plus-icon {
+    transform: rotate(45deg);
+  }
+
+  .accordion-img {
+    width: 31.25em;
+  }
+
+  .accordion-img:hover {
+    transform: scale(1.05);
+  }
+}
