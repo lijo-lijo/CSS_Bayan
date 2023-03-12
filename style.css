@@ -1,3 +1,8 @@
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 body {
   background-color: cornsilk;
 }
@@ -67,4 +72,82 @@ body {
 
 .plus-icon {
   transition: all 0.25s ease-in-out;
+}
+
+/* tablet */
+
+@media (min-width: 820px) {
+  .header {
+    font-size: 1.5em;
+  }
+
+  .bayan-container {
+    margin: 0 auto;
+    max-width: 50em;
+  }
+
+  .accordion-title {
+    font-size: 1.25em;
+  }
+
+  .accordion-img {
+    max-width: 25em;
+  }
+}
+
+/* desktop */
+@media (min-width: 1920px) {
+  .header {
+    font-size: 2.25em;
+  }
+
+  .bayan-container {
+    margin: 0 auto;
+    max-width: 50em;
+  }
+
+  .bayan-container:hover .accordion-item > .accordion-title > .plus-icon {
+    color: black;
+  }
+
+  .bayan-container:hover .accordion-item > .accordion-title {
+    color: black;
+  }
+
+  .accordion-item {
+    cursor: pointer;
+  }
+
+  .accordion-title {
+    color: blue;
+    font-size: 1.75em;
+  }
+
+  .accordion-input:checked ~ .accordion-title,
+  .accordion-item:hover > .accordion-title {
+    color: black;
+  }
+
+  .accordion-item:hover > .accordion-content {
+    padding: 1.25em 0;
+    max-height: 50em;
+    opacity: 1;
+    transition: max-height 0.5s ease-in;
+  }
+
+  .plus-icon {
+    color: cornsilk;
+  }
+
+  .accordion-item:hover > .accordion-title > .plus-icon {
+    transform: rotate(45deg);
+  }
+
+  .accordion-img {
+    width: 31.25em;
+  }
+
+  .accordion-img:hover {
+    transform: scale(1.05);
+  }
 }
