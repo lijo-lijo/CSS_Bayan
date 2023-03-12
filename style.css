@@ -42,3 +42,14 @@ body {
   align-items: center;
   max-width: 12.5em;
 }
+
+.accordion-input {
+  appearance: none;
+  position: absolute;
+}
+
+.accordion-input:checked ~ .accordion-content {
+  padding: 1.25em 0;
+  max-height: 50em;
+  opacity: 1;
+}
