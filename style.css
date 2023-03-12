@@ -28,3 +28,17 @@ body {
   font-weight: bold;
   padding: 0.625em 0px;
 }
+
+.accordion-content {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+}
+
+.accordion-img {
+  display: flex;
+  align-items: center;
+  max-width: 12.5em;
+}
