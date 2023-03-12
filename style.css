@@ -35,12 +35,18 @@ body {
   overflow: hidden;
   max-height: 0;
   opacity: 0;
+  transition: max-height 0.5s ease-out, opacity 1s;
 }
 
 .accordion-img {
   display: flex;
   align-items: center;
   max-width: 12.5em;
+  transition: opacity 0.1s ease-in-out, transform 0.7s ease;
+}
+
+.accordion-img:active {
+  opacity: 0.8;
 }
 
 .accordion-input {
@@ -52,8 +58,13 @@ body {
   padding: 1.25em 0;
   max-height: 50em;
   opacity: 1;
+  transition: max-height 0.5s ease-in;
 }
 
 .accordion-input:checked ~ .accordion-title > .plus-icon {
   transform: rotate(45deg);
+}
+
+.plus-icon {
+  transition: all 0.25s ease-in-out;
 }
