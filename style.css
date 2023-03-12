@@ -53,3 +53,7 @@ body {
   max-height: 50em;
   opacity: 1;
 }
+
+.accordion-input:checked ~ .accordion-title > .plus-icon {
+  transform: rotate(45deg);
+}
